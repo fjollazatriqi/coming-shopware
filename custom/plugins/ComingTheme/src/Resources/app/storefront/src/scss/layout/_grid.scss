@@ -1,0 +1,32 @@
+.cms-block-product-listing {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: spacing(3);
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+      gap: spacing(2);
+    }
+  }
+
+  .product-item {
+    background-color: $theme-color-white;
+    border: 1px solid darken-color(#ddd, 5%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-box {
+      border-color: transparent;
+      padding: spacing(2);
+      transition: border-color 0.3s ease-in-out;
+    }
+  }
+}

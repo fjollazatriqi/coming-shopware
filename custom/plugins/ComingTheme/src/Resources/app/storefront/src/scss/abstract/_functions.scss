@@ -1,0 +1,16 @@
+@function lighten-color($color, $percentage) {
+  @return lighten($color, $percentage);
+}
+
+@function darken-color($color, $percentage) {
+  @return darken($color, $percentage);
+}
+
+@function px-to-rem($size, $base: 16px) {
+  @return calc($size / $base) * 1rem;
+}
+
+@function spacing($multiplier) {
+  $base-spacing: 8px;
+  @return $base-spacing * $multiplier;
+}

@@ -1,0 +1,24 @@
+@mixin flex(
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin btn($bg-color: #8d8d8d, $text-color: #000, $padding: 8px 24px) {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  border-radius: 4px;
+  padding: $padding;
+  margin-bottom: spacing(2);
+  background-color: $bg-color;
+  color: $text-color;
+}

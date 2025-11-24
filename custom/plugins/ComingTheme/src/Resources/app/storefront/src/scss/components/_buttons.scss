@@ -1,0 +1,7 @@
+.btn-primary {
+  @include btn(#3bbe51, #fff);
+}
+
+.btn-secondary {
+  @include btn(#dbcebe, #000);
+}

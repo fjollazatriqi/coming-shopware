@@ -1,0 +1,17 @@
+# PHP / Shopware
+/vendor/
+/var/
+/node_modules/
+/public/bundles/
+/platform/src/Storefront/Resources/app/storefront/dist/
+/platform/src/Administration/Resources/app/administration/dist/
+/.env
+/.ddev/.global-web-build-cache
+/.ddev/.global-db-build-cache
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.log
+

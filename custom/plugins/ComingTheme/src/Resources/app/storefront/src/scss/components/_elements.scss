@@ -1,0 +1,70 @@
+.highlight-slider {
+  .swiper-slide {
+    height: auto;
+    .highlight-image {
+      position: relative;
+      @include flex(column, center, center);
+      height: 100%;
+
+      .highlight-content {
+        position: absolute;
+        left: 15%;
+        transform: translateX(-50%);
+        width: 40%;
+        color: white;
+        @media (max-width: 768px) {
+          width: 70%;
+        }
+
+        .highlight-content-inner {
+          padding: spacing(5);
+          @media (max-width: 768px) {
+            padding: spacing(2);
+          }
+          h3 {
+            @extend %h3;
+            text-transform: uppercase;
+
+            @media (max-width: 768px) {
+              margin-bottom: 0;
+              font-size: px-to-rem(16);
+              line-height: px-to-rem(24);
+            }
+          }
+
+          a {
+            text-decoration: underline;
+            font-style: italic;
+            padding: 0;
+
+            @media (max-width: 768px) {
+              margin-bottom: 0;
+              font-size: px-to-rem(10);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* When the slide is active, fade the content in */
+.swiper-slide-active .highlight-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  }
+  
+  .highlight-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .highlight-content.loaded {
+    display: block;
+    opacity: 1;
+  }
+  

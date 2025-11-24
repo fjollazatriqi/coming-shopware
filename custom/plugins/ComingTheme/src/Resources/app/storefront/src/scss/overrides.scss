@@ -1,0 +1,29 @@
+/*
+Override variable defaults
+==================================================
+This file is used to override default SCSS variables from the Shopware Storefront or Bootstrap.
+
+Because of the !default flags, theme variable overrides have to be declared beforehand.
+https://getbootstrap.com/docs/5.3/customize/sass/#variable-defaults
+*/
+
+//Status messages
+$sw-color-success: #3bbe51;
+$sw-color-danger: #ec5050;
+$sw-color-info: #8faac1;
+$sw-color-warning: #974200;
+
+//Theme colours
+$sw-color-brand-primary: #c54f13;
+$sw-color-brand-secondary: #d1c2b1;
+$sw-background-color: #ffffff;
+$sw-border-color: #000000;
+
+//Typography
+$sw-text-color: #000000;
+$sw-headline-color: #000000;
+
+//E-commerce
+$sw-color-price: #3c221c;
+$sw-color-buy-button-text: #f8f1e9;
+$sw-color-buy-button: #a57c66;
