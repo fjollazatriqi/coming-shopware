@@ -1,0 +1,26 @@
+{% sw_extends '@Storefront/storefront/layout/header/top-bar.html.twig' %}
+
+{# Override the inner block to remove the currency widget and show a single promotional topbar with optional language widget #}
+{% block layout_header_top_bar_inner %}
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg">
+                <div class="top-bar-promo text-center small text-truncate">
+                    {# A simple, configurable promo text - replace with translation key if needed #}
+                    <span class="top-bar-promo-text">Summer Sale — Up to <strong>50% off</strong> selected items! <a href="/promotion">Shop now</a></span>
+                </div>
+            </div>
+
+            {% if header.languages.count > 1 %}
+                <div class="col-auto d-none d-lg-block">
+                    <nav class="top-bar-nav d-flex justify-content-end gap-3"
+                         aria-label="{{ 'header.topBarAriaLabel'|trans|striptags }}">
+                        {% block layout_header_top_bar_language %}
+                            {% sw_include '@Storefront/storefront/layout/header/actions/language-widget.html.twig' %}
+                        {% endblock %}
+                    </nav>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

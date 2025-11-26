@@ -1,0 +1,96 @@
+// ComingTheme: modern main navigation styles
+.main-navigation-menu {
+	font-weight: 600;
+	letter-spacing: 0.02em;
+
+	// wider space between categories
+	.nav-item:not(:last-child) {
+		margin-right: 3rem;
+	}
+
+	.main-navigation-link {
+		display: inline-flex;
+		align-items: center;
+		color: $sw-text-color;
+		transition: color 160ms ease, transform 160ms ease;
+
+		&:hover,
+		&.active {
+			color: $sw-color-brand-primary;
+			transform: translateY(-1px);
+		}
+
+		.main-navigation-link-text {
+			border-bottom: 0; // switch to pseudo-element underline
+			padding-bottom: 0.25rem;
+			transition: color 160ms ease;
+			position: relative;
+			&::after {
+				content: '';
+				display: block;
+				height: 3px; // thicker underline
+				width: 0;
+				background: $sw-color-brand-primary;
+				position: absolute;
+				left: 0; // match text width - fill left to right
+				bottom: -6px;
+				transition: width 220ms cubic-bezier(.2,.9,.2,1);
+			}
+		}
+		&:hover .main-navigation-link-text,
+		&.active .main-navigation-link-text {
+			color: $sw-color-brand-primary;
+			&::after { width: 100%; }
+		}
+	}
+
+	// Dropdowns
+	.dropdown-menu {
+		border-radius: 8px;
+		box-shadow: 0 8px 30px rgba(40, 44, 63, 0.1);
+		padding: 0.75rem;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.main-navigation-menu {
+		.main-navigation-link {
+			display: block;
+			padding: 0.5rem 0;
+		}
+	}
+}
+
+
+.nav-main {
+	background: #ffffff;
+	// use top and bottom borders only
+	border-top: 1px solid rgba(0,0,0,0.04);
+	border-bottom: 1px solid rgba(0,0,0,0.04);
+	// only top and bottom shadows; avoid left-right shadowing
+	box-shadow: 0 -6px 24px rgba(37,50,80,0.04), 0 6px 24px rgba(37,50,80,0.04);
+	padding: 0.6rem 0;
+	// make the nav width match its parent (full width)
+	width: 100%;
+	@media (min-width: 992px) {
+		border-radius: 10px; /* subtle rounded container */
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		// use a full-width flex container so the background takes full width
+		display: flex;
+		width: 100%;
+		// reset margins so it fills its parent
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+
+
+@media (max-width: 767.98px) {
+	// remove heavy decorations on small screens for better compactness
+	.main-navigation,
+	.nav-main { box-shadow: none; border-top: none; border-bottom: none; margin-top: 0.5rem; }
+}
+
+
