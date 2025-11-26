@@ -3,6 +3,8 @@
 /var/
 /node_modules/
 /public/bundles/
+/public/theme/
+/public/theme/**
 /platform/src/Storefront/Resources/app/storefront/dist/
 /platform/src/Administration/Resources/app/administration/dist/
 /.env
