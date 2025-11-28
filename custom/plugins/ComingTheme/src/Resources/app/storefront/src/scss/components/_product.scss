@@ -1,0 +1,114 @@
+// Product card styles for ComingTheme
+
+.product-item {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  will-change: transform;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(10, 20, 38, 0.08);
+  }
+
+  .card.product-box {
+    border: 0;
+    background: transparent;
+  }
+
+  .product-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.03);
+
+    img,
+    picture,
+    .product-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-image-placeholder {
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-wishlist-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      z-index: 2;
+      background: rgba(255,255,255,0.85);
+      border-radius: 50%;
+      padding: 0.4rem;
+      box-shadow: 0 8px 18px rgba(10,20,38,0.06);
+    }
+  }
+
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0.4rem;
+  }
+
+  .product-name {
+    font-weight: 600;
+    color: $sw-text-color;
+    display: block;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+      color: $sw-color-brand-primary;
+    }
+
+    /* Pseudo-element underline */
+    &::after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 0;
+      background: $sw-color-brand-primary;
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      transition: width 280ms cubic-bezier(.2,.9,.2,1);
+    }
+
+    &:hover::after { width: 100%; }
+  }
+
+    .product-description {
+    color: rgba($sw-text-color, 0.7);
+    font-size: 0.92rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* show two lines */
+    line-clamp: 2;
+    overflow: hidden;
+  }
+
+  .product-price {
+    font-weight: 700;
+    color: $sw-color-brand-primary;
+    font-size: 1.1rem;
+  }
+
+  .product-rating { margin-bottom: 0.25rem; }
+
+  @media (max-width: 767.98px) {
+    &:hover { transform: none; box-shadow: 0 4px 10px rgba(10,20,38,0.05); }
+
+    .product-image-wrapper { aspect-ratio: 1/1; }
+  }
+}

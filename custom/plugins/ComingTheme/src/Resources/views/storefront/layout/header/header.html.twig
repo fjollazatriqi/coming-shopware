@@ -6,7 +6,8 @@
     {% endblock %}
 
     {% block layout_header_navigation %}
-        <div class="row align-items-center header-row">
+        <div class="container row justify-content-between align-items-center header-row">
+    
             {% block layout_header_logo %}
                 <div class="col-12 col-lg-auto header-logo-col pb-sm-2 my-3 m-lg-0">
                     {% sw_include '@Storefront/storefront/layout/header/logo.html.twig' %}
@@ -125,6 +126,7 @@
                     </div>
                 </div>
             {% endblock %}
-        </div>
+            </div>
+        
     {% endblock %}
 {% endblock %}

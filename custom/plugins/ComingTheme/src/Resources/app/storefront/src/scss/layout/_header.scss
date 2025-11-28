@@ -1,90 +1,99 @@
-// ComingTheme: styles for promotional top-bar
-.top-bar {
-	background-color: $sw-color-brand-primary; // full width background
-}
+.header-main {
+	// ComingTheme: styles for promotional top-bar
+	.top-bar {
+		background-color: $sw-color-brand-primary; // full width background
 
-.top-bar .top-bar-promo {
-	padding: 0.25rem 0;
-	font-size: 0.875rem; // slightly smaller
-	background-color: transparent;
-	color: #fff;
-}
+		.top-bar-promo {
+			padding: 0.25rem 0;
+			font-size: 0.875rem; // slightly smaller
+			background-color: transparent;
+			color: #fff;
 
-.top-bar .top-bar-promo a,
-.top-bar .top-bar-nav a {
-	color: #fff;
-	text-decoration: underline;
-}
-
-/* Search input modern style */
-/* header search container: unified rounded pill style */
-.header-search,
-.header-search-form {
-	.form-control,
-	input[type="search"],
-	.header-search-form input[type="search"] {
-		border-radius: 999px 0 0 999px; // left side pill
-		padding: 0.5rem 1rem 0.5rem 1.25rem;
-		border: 1px solid rgba(0, 0, 0, 0.08);
-		background: #fff;
-		box-shadow: 0 6px 16px rgba(37, 50, 80, 0.06);
-
-		&::placeholder {
-			color: rgba(0, 0, 0, 0.45);
+			a,
+			.top-bar-nav a {
+				color: #fff;
+				text-decoration: underline;
+			}
 		}
 
-		&:focus {
-			border-color: rgba($sw-color-brand-primary, 0.85);
-			box-shadow: 0 6px 24px rgba(37, 50, 80, 0.12);
-			
-			outline: none;
+		.top-bar-promo .top-bar-promo-text {
+			display: inline-block;
+			vertical-align: middle;
 		}
 	}
 
-	.header-search-btn {
-		border-radius: 0 999px 999px 0!important;
-		height: auto;
-		min-width: 48px;
-		padding: 0.45rem 0.75rem;
-		margin-left: 0;
-		border: 1px solid rgba(0,0,0,0.08);
-		border-left: 0; // remove double border between input and button
-		background: $sw-color-brand-primary;
-		color: #fff;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		/* no transitions on search btn */
+	/* Search input modern style */
+	/* header search container: unified rounded pill style */
+	.header-search,
+	.header-search-form {
+		.form-control,
+		input[type="search"],
+		.header-search-form input[type="search"] {
+			border-radius: 999px 0 0 999px; // left side pill
+			padding: 0.5rem 1rem 0.5rem 1.25rem;
+			border: 1px solid rgba(0, 0, 0, 0.08);
+			background: #fff;
+			box-shadow: 0 6px 16px rgba(37, 50, 80, 0.06);
 
-		.icon { color: #fff; }
+			&::placeholder { color: rgba(0, 0, 0, 0.45); }
 
-		&:hover { background-color: darken($sw-color-brand-primary, 6%); }
+			&:focus {
+				border-color: rgba($sw-color-brand-primary, 0.85);
+				box-shadow: 0 6px 24px rgba(37, 50, 80, 0.12);
+				outline: none;
+			}
+		}
+
+		.header-search-btn {
+			border-radius: 0 999px 999px 0!important;
+			height: auto;
+			min-width: 48px;
+			padding: 0.45rem 0.75rem;
+			margin-left: 0;
+			border: 1px solid rgba(0,0,0,0.08);
+			border-left: 0; // remove double border between input and button
+			background: $sw-color-brand-primary;
+			color: #fff;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+
+			.icon { color: #fff; }
+
+			&:hover { background-color: darken($sw-color-brand-primary, 6%); }
+		}
+
+		// When using the `.search-group` input-group wrapper
+		.input-group.search-group {
+			.form-control { border-right: 999px; }
+			.header-search-btn { border-left: 0; }
+		}
+
+		// wrapper to combine input + button into one pill-like component
+		&.search-group {
+			display: inline-flex;
+			align-items: center;
+			background: transparent;
+			border-radius: 999px;
+			overflow: hidden;
+			box-shadow: 0 6px 16px rgba(37, 50, 80, 0.06);
+		}
 	}
 
-	// When using the `.search-group` input-group wrapper
-	.input-group.search-group {
-		.form-control { border-right: 999px; }
-		.header-search-btn { border-left: 0; }
-	}
-
-	// wrapper to combine input + button into one pill-like component
-	&.search-group {
-		display: inline-flex;
+	/* Slightly taller header spacing to match modern look */
+	.header-row {
+		padding: 1rem 0;
+		display: flex; /* ensure row behaviour */
+		flex-direction: row;
+		justify-content: space-between;
 		align-items: center;
-		background: transparent;
-		border-radius: 999px;
-		overflow: hidden;
-		box-shadow: 0 6px 16px rgba(37, 50, 80, 0.06);
+		margin: auto;
+
+		@media (max-width: 767.98px) {
+			/* on small screens stack elements vertically */
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 0.5rem;
+		}
 	}
 }
-
-/* Slightly taller header spacing to match modern look */
-.header-row { padding: 1rem 0; }
-
-
-.top-bar .top-bar-promo .top-bar-promo-text {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-// right side pill

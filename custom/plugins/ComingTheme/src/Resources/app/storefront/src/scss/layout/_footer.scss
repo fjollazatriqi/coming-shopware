@@ -1,0 +1,90 @@
+// Footer styles for ComingTheme (nested SCSS structure)
+.footer-main {
+  background: $sw-color-brand-primary;
+  color: #fff;
+
+  // Links and interactive elements inside footer
+  a,
+  .footer-link,
+  .footer-service-menu-link,
+  .footer-contact-hotline {
+    color: #fff;
+  }
+
+  a:hover,
+  a:focus {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+  }
+
+  .footer-branding-row {
+    align-items: center;
+  }
+
+  .footer-branding-logo {
+    .header-logo-main-img {
+      max-height: 48px;
+      width: auto;
+      filter: none; // if you need to invert for dark backgrounds, consider theme logo variant
+    }
+  }
+
+  .footer-social-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+
+    li { display: inline-flex; }
+  }
+
+  .footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+
+    svg { display: block; width: 18px; height: 18px; }
+
+    &:hover { background: rgba(255, 255, 255, 0.12); }
+  }
+
+  .footer-hotline-social { margin-top: 0.75rem; }
+  .footer-hotline-social .footer-social-list { justify-content: flex-start; }
+
+  .footer-contact-hotline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .footer-column-headline { color: #fff; }
+  .footer-column-content-inner {
+    .footer-link { color: #fff; opacity: 0.95; }
+    .footer-link:hover { color: #fff; opacity: 1; }
+  }
+
+  .footer-logos {
+    .footer-logo-image { filter: none; opacity: 0.9; }
+  }
+
+  .footer-bottom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    background: inherit; // keep the same color as footer-main
+  }
+
+  // Responsive adjustments
+  @media (max-width: 767.98px) {
+    .footer-branding-row { text-align: center; }
+    .footer-branding-logo { margin-bottom: 0.5rem; }
+    .footer-branding-social { margin-bottom: 0.5rem; }
+
+    .footer-hotline-social .footer-social-list { justify-content: center; }
+  }
+}
