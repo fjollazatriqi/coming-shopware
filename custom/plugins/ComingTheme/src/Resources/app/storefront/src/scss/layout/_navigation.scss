@@ -1,7 +1,7 @@
 // ComingTheme: modern main navigation styles (nested structure)
 
 .nav-main {
-	background: #ffffff;
+	background: $sw-color-brand-primary;
 	// use top and bottom borders only
 	border-top: 1px solid rgba(0, 0, 0, 0.04);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.04);
@@ -10,11 +10,11 @@
 	padding: 0.6rem 0;
 	justify-content: center;
 	width: 100%;
+	 @media (max-width: 768px) {
+       display: none;
+      }
 
 	@media (min-width: 992px) {
-		border-radius: 10px; /* subtle rounded container */
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
 		// use a full-width flex container so the background takes full width
 		display: flex;
 		width: 100%;
@@ -22,8 +22,6 @@
 		margin-left: 0;
 		margin-right: 0;
 	}
-
-	.main-navigation {
 		// Keep the layout container for the actual menu
 		.main-navigation-menu {
 			font-weight: 600;
@@ -37,11 +35,14 @@
 			.main-navigation-link {
 				display: inline-flex;
 				align-items: center;
-				color: $sw-text-color;
+				color: white;
 				transition: color 160ms ease, transform 160ms ease;
 
 				&:hover,
-				&.active { color: $sw-color-brand-primary; transform: translateY(-1px); }
+				&.active { 
+					transform: translateY(-1px);
+					font-weight: 600;
+				 }
 
 				.main-navigation-link-text {
 					border-bottom: 0; // switch to pseudo-element underline
@@ -54,7 +55,7 @@
 						display: block;
 						height: 3px; // thicker underline
 						width: 0;
-						background: $sw-color-brand-primary;
+						background: white;
 						position: absolute;
 						left: 0; // match text width - fill left to right
 						bottom: -6px;
@@ -62,7 +63,13 @@
 					}
 				}
 				&:hover .main-navigation-link-text,
-				&.active .main-navigation-link-text { color: $sw-color-brand-primary; &::after { width: 100%; } }
+				&.active .main-navigation-link-text { 
+					color: white; 
+					border-bottom: 0px solid white;
+					&::after { 
+						width: 100%; 
+					} 
+				}
 			}
 
 			// Dropdowns
@@ -81,7 +88,7 @@
 				justify-content: flex-start;
 			}
 		}
-	}
+	
 }
 
 @media (max-width: 767.98px) {

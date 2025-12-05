@@ -60,9 +60,15 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+   
   }
 
-  .footer-column-headline { color: #fff; }
+  .footer-column-headline { 
+    color: #fff; 
+     @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
   .footer-column-content-inner {
     .footer-link { color: #fff; opacity: 0.95; }
     .footer-link:hover { color: #fff; opacity: 1; }
