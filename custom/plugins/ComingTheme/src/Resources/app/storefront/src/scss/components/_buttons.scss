@@ -1,7 +1,8 @@
 .btn-primary {
-  @include btn(#3bbe51, #fff);
+  @include btn(#105345, #fff);
+  border-radius: 8px;
 }
 
 .btn-secondary {
-  @include btn(#dbcebe, #000);
+  @include btn(#dbcebe, #105345);
 }

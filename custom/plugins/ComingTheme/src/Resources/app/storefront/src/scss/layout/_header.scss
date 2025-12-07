@@ -3,7 +3,7 @@
 	background-color: $sw-color-brand-secondary;
 	.top-bar {
 		background-color: $sw-color-brand-primary; // full width background
-
+         display: block !important;
 		.top-bar-promo {
 			padding: 0.25rem 0;
 			font-size: 0.875rem; // slightly smaller

@@ -1,0 +1,103 @@
+.cms-block-product-heading{
+    display: none;
+}
+.cms-element-image-gallery{
+    .base-slider-controls-prev, .base-slider-controls-next{
+            background-color: $sw-color-brand-primary;
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            .icon{
+                color: $sw-color-brand-secondary;
+                svg{
+                    top:-5px;
+                }
+            }
+      
+    }
+    .gallery-slider-thumbnails-col{
+        .gallery-slider-thumbnails-item-inner{
+            border-radius: 8px;
+        }
+    }
+}
+.cms-element-buy-box{
+    .product-name{
+       font-size: 28px;
+       color: $sw-color-brand-primary;
+       margin-bottom: 0;
+       display: flex;
+       align-items: center;
+       @media (max-width: 768px) {
+         font-size: 24px;
+       }
+    }
+    .manufacturer{
+       color: $sw-color-brand-primary;
+       font-size: 20px;
+    }
+    .product-detail-reviews{
+
+    }
+    .product-detail-ordernumber-container{
+
+    }
+    .product-detail-price-container{
+       display: flex;
+       align-items: center;
+    }
+    .list-price-badge, .product-detail-ordernumber-container{
+      display: none;
+    }
+    .product-detail-list-price-wrapper{
+       font-size: 18px;
+       margin-left: 5px;
+    }
+    .product-detail-tax-container{
+
+    }
+    .product-detail-configurator-container{
+        .product-detail-configurator-group{
+            .product-detail-configurator-option{
+                .product-detail-configurator-option-label{
+                    color: $sw-color-brand-primary;
+                    border-radius: 4px;
+                    border: 2px solid $sw-color-brand-primary;
+                &.is-display-color{
+                    height: 30px;
+                }
+                }
+
+            }
+        }
+    }
+    .buy-widget{
+        .quantity-selector-group{
+            height: fit-content;
+        }
+    }
+}
+.product-detail-tabs-content{
+    .product-detail-description-title{
+        display: none;
+    }
+}
+
+.product-detail-cross-selling{
+    .product-detail-tabs-content {
+        .product-box{
+            .product-image-wrapper{
+                height: auto;
+                img{
+                    max-height: unset;
+                }
+            }
+            .product-info{
+                .product-name{
+                    font-size: 18px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}

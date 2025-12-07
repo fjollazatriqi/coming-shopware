@@ -1,0 +1,11 @@
+.breadcrumb{
+ .breadcrumb-item{
+    .breadcrumb-link{
+        font-size: 22px;
+        text-decoration: none;
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+     }
+ }  
+}

@@ -1,0 +1,66 @@
+
+
+   .filter-panel-item-toggle{
+          border: none;
+          color: $sw-color-brand-primary;
+          .icon{
+            color: $sw-color-brand-primary;
+          }
+        }
+        .filter-multi-select-dropdown{
+             border: none !important;
+        }
+  .filter-panel-wrapper-toggle{
+ border-radius: 8px;
+ border: none;
+        background-color: $sw-color-brand-secondary;
+  }
+
+ .filter-panel{
+    .filter-panel-items-container{
+      .filter-multi-select, .filter-range{
+        border-radius: 8px;
+        background-color: $sw-color-brand-secondary;
+       
+      }
+    }
+  }
+  .filter-panel-offcanvas-header{
+    h2, .btn-close{
+      color: $sw-color-brand-primary;
+    }
+  }
+
+.cms-element-product-listing{
+    .cms-element-product-listing-actions{
+        .sorting{
+            .form-select{
+                border: 2px solid $sw-color-brand-primary;
+                border-radius: 8px;
+                color: $sw-color-brand-primary;
+                font-weight: bold;
+            }
+        }
+    }
+    .cms-listing-row{
+        .product-box{
+            .product-image-wrapper{
+                height: 245px;
+            }
+            .product-info{
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+                    .product-name{
+                       height: 31px;
+                        font-size: 20px; 
+                    }
+                    .product-price{
+                      .list-price-percentage{
+                        font-size: 14px;
+                      }
+                    }
+            }
+        }
+    }
+}
