@@ -1,0 +1,145 @@
+.cart-item-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  border-radius: 10px;
+  background: #fff;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+
+  box-shadow: 0 2px 6px $sw-cart-border, 0 1px 3px $sw-cart-border-shadow-light;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px $sw-cart-border-shadow-deep, 0 2px 6px $sw-cart-border-shadow-medium;
+    transform: translateY(-2px);
+  }
+
+  &__top-row {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__image {
+    width: 110px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 0px;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__footer {
+    border-top: 1px solid $sw-cart-border;
+    margin-top: 10px;
+
+    .line-item-total-price {
+      flex-shrink: 0;
+      width: 20%;
+      float: right;
+      display: inline-block;
+    }
+
+    .line-item-total-price-value {
+      padding-top: 10px;
+    }
+
+    .line-item-quantity-selector {
+      width: 70%;
+      display: inline-block;
+    }
+
+    .line-item-quantity-label {
+      visibility: hidden;
+      padding: 0;
+      margin: 0;
+      max-height: 15px;
+    }
+
+    .input-group {
+      border: 1px solid $sw-cart-border;
+    }
+
+    .form-control {
+      font-size: 15px;
+      border: 1px solid $sw-cart-border;
+    }
+
+    .btn {
+      font-size: 15px;
+      border: 1px solid $sw-cart-border;
+      line-height: 1rem;
+    }
+
+    .quantity-selector-group .btn-outline-light svg {
+      top: 2px;
+    }
+  }
+}
+
+.cart-item-line-button-remove {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 10;
+
+  button {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+  }
+
+  svg {
+    width: 14px !important;
+    height: 14px !important;
+    pointer-events: none;
+
+    stroke-width: 1.5;
+    fill: $sw-cart-svg !important;
+    stroke: $sw-cart-svg !important;
+    transition: stroke-width 0.15s ease;
+  }
+
+  button:hover svg {
+    stroke-width: 2.5;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+.offcanvas-cart-items {
+  border-bottom: 2px solid $sw-color-brand-primary;
+  padding-bottom: 20px;
+}
+
+.offcanvas-cart-header {
+  max-height: 0px;
+  visibility: hidden;
+}
+
+.offcanvas-body {
+  padding-top: 0px;
+}
