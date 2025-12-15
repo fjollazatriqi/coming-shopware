@@ -1,0 +1,72 @@
+{% sw_extends '@Storefront/storefront/component/line-item/type/product.html.twig' %}
+
+{% block component_line_item_type_product %}
+    <div class="cart-item-card d-flex flex-column gap-2 js-cart-item">
+
+        <div class="cart-item-card__top-row d-flex gap-3">
+            <div class="cart-item-card__image">
+                {% block component_line_item_type_product_image_inner %}
+                    {{ parent() }}
+                {% endblock %}
+            </div>
+
+            <div class="cart-item-card__content flex-grow-1">
+                {% block component_line_item_type_product_details %}
+                    <div class="line-item-details">
+                        {% block component_line_item_type_product_details_container %}
+                            <div class="line-item-details-container">
+                                {% block component_line_item_type_product_label %}
+                                    {% sw_include '@Storefront/storefront/component/line-item/element/label.html.twig' with {
+                                        lineItemLink: displayMode !== 'order' or lineItem.productId ? seoUrl('frontend.detail.page', { productId: lineItem.referencedId }) : null,
+                                        lineItemModalLink: showLineItemModal ? path('widgets.quickview.minimal', { productId: lineItem.referencedId }) : false,
+                                    } %}
+                                {% endblock %}
+
+                                {% if lineItem.payload.options is not empty %}
+                                    {% block component_line_item_type_product_variant_characteristics %}
+                                        {% sw_include '@Storefront/storefront/component/line-item/element/variant-characteristics.html.twig' %}
+                                    {% endblock %}
+                                {% endif %}
+
+                                {% if config('core.cart.showDeliveryTime') %}
+                                    {% block component_line_item_type_product_delivery_date %}
+                                        {% sw_include '@Storefront/storefront/component/line-item/element/delivery-date.html.twig' %}
+                                    {% endblock %}
+                                {% endif %}
+                            </div>
+                        {% endblock %}
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+
+        <div class="cart-item-card__footer d-flex justify-content-between align-items-center">
+            {% block component_line_item_type_product_col_quantity %}
+                <div class="line-item-quantity-selector">
+                    {% sw_include '@Storefront/storefront/component/line-item/element/quantity.html.twig' %}
+                </div>
+            {% endblock %}
+
+            {% if showSubtotal %}
+                {% block component_line_item_type_product_col_total_price %}
+                    <div class="line-item-total-price line-item-price">
+                        {% sw_include '@Storefront/storefront/component/line-item/element/total-price.html.twig' with {
+                            currency: lineItem.order.currency.isoCode
+                        } %}
+                    </div>
+                {% endblock %}
+            {% endif %}
+        </div>
+
+        {% if showRemoveButton %}
+            {% block component_line_item_type_product_col_remove %}
+                <div class="line-item-remove cart-item-line-button-remove">
+                    {% if lineItem.removable and nestingLevel < 1 %}
+                        {% sw_include '@Storefront/storefront/component/line-item/element/remove.html.twig' %}
+                    {% endif %}
+                </div>
+            {% endblock %}
+        {% endif %}
+
+    </div>
+{% endblock %}
