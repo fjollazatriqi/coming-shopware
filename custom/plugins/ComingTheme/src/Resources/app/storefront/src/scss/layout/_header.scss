@@ -22,6 +22,9 @@
 			vertical-align: middle;
 		}
 	}
+	.icon{
+		color: $sw-color-buy-button;
+	}
 	 @media (max-width: 768px) {
        .header-logo-col{
 		margin-top: unset;
@@ -104,4 +107,15 @@
 			gap: 0.5rem;
 		}
 	}
+}
+
+.header-minimal{
+	background: $sw-color-brand-secondary;
+	 @media (min-width: 768px) {
+		padding: 0 60px;
+	 }
+	 .header-minimal-back-to-shop-button{
+		background-color: $sw-color-buy-button;
+		color: #fff;
+	 }
 }

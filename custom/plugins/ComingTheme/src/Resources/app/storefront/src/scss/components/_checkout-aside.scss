@@ -1,0 +1,22 @@
+.checkout-aside-container{
+    display: flex;
+    flex-direction: column;
+    .checkout-aside-summary{
+        order: 2;
+        background-color: $sw-color-brand-secondary;
+    }
+    .checkout-aside-products{
+        order: 1;
+        .cart-item-card {
+            .cart-item-card__image{
+                width: 70px;
+            }
+            .line-item-details{
+                width: 100%;
+            }
+            .cart-item-card__footer{
+                margin-top: 0;
+            }
+        }
+    }
+}
