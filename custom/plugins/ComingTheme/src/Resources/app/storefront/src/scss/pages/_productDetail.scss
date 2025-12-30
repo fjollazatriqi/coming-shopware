@@ -21,6 +21,13 @@
         }
     }
 }
+.product-detail-delivery-information{
+    .product-delivery-information{
+        p{
+            margin-bottom: 5px;
+        }
+    }
+}
 .cms-element-buy-box{
     .product-name{
        font-size: 28px;
@@ -100,4 +107,20 @@
             }
         }
     }
+}
+
+.product-extra-info{
+    @include flex(column, center, start);
+    span{
+        background-color: $sw-color-brand-secondary;
+        color: $sw-color-brand-primary;
+        padding: 3px;
+        border-radius: 4px;
+        margin-bottom: 4px;
+        width: 70%;
+        svg{
+            margin-right: 3px;
+        }
+    }
+
 }

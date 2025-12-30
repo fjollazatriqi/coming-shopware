@@ -101,5 +101,20 @@
     }
   }}
 
+  .product-box-extra-info{
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    height: auto;
+    min-height: 25px;
+    .extra-item{
+      border-radius: 100%;
+      background-color: $sw-color-brand-secondary;
+      padding: 4px;
+      margin-right: 8px;
+    }
+  }
+
+
  }
  

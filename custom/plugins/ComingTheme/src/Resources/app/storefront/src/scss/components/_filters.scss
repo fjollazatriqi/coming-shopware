@@ -1,0 +1,34 @@
+.filter-panel-item-toggle{
+          border: none;
+          color: $sw-color-brand-primary;
+          .icon{
+            color: $sw-color-brand-primary;
+          }
+}
+
+.filter-multi-select-dropdown{
+             border: none !important;
+        }
+
+  .filter-panel-wrapper-toggle{
+ border-radius: 8px;
+ border: none;
+        background-color: $sw-color-brand-secondary;
+  }
+
+ .filter-panel{
+    .filter-panel-items-container{
+      .filter-multi-select, .filter-range, .filter-boolean{
+        border-radius: 8px;
+        background-color: $sw-color-brand-secondary;
+        border: none;
+        color: $sw-color-brand-primary;
+      }
+    }
+  }
+
+  .filter-panel-offcanvas-header{
+    h2, .btn-close{
+      color: $sw-color-brand-primary;
+    }
+  }

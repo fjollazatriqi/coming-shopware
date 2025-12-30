@@ -6,3 +6,13 @@
 .btn-secondary {
   @include btn(#bad1fc, #192d91);
 }
+
+.btn-minus, .btn-plus {
+  border: none;
+  &:hover {
+    background-color: transparent;
+  }
+  .icon{
+    color: $sw-color-brand-primary;
+  }
+}

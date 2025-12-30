@@ -67,6 +67,30 @@
                     {% endblock %}
                 </div>
             {% endif %}
+
+{% block page_product_detail_additional_info %}
+    {% set customFields = page.product.customFields %}
+
+    {% if customFields %}
+        <div class="product-extra-info d-fle">
+            {% if customFields.product_extra_info_one %}<span> 
+            <svg fill="#000f58" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>heat-haze</title> <path d="M20.472 1.015c-16.746 15.010 14.885 14.399-5.385 29.548 9.012-15.187-20.731-17.718 5.385-29.548zM8.799 6.381c-6.122 10.362 10.36 11.45 3.81 22.899 2.7-9.438-14.683-14.474-3.81-22.899zM21.149 3.040c-5.661 9.675 13.886 12.748 1.921 22.484 6.583-9.698-13.416-13.912-1.921-22.484z"></path> </g></svg>
+            {{ customFields.product_extra_info_one }}</span>{% endif %}
+            {% if customFields.product_extra_info_two %}<span>
+            <svg fill="#000f58" width="30px" height="30px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" fill="#000f58"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.cls-1{fill:none;stroke:#000f58;stroke-miterlimit:10;stroke-width:1.92px;}</style></defs><polyline class="cls-1" points="12 23.5 12 17.75 12 14.88"></polyline><line class="cls-1" x1="12" y1="9.13" x2="12" y2="0.5"></line><polyline class="cls-1" points="15.35 2.9 12 6.25 8.65 2.9"></polyline><polyline class="cls-1" points="12 23.5 12 17.75 12 14.88"></polyline><line class="cls-1" x1="12" y1="9.13" x2="12" y2="0.5"></line><polyline class="cls-1" points="8.65 21.1 12 17.75 15.35 21.1"></polyline><polyline class="cls-1" points="21.96 17.75 16.98 14.88 14.49 13.44"></polyline><line class="cls-1" x1="9.51" y1="10.56" x2="2.04" y2="6.25"></line><polyline class="cls-1" points="5.79 4.54 7.02 9.13 2.44 10.35"></polyline><polyline class="cls-1" points="21.96 17.75 16.98 14.88 14.49 13.44"></polyline><line class="cls-1" x1="9.51" y1="10.56" x2="2.04" y2="6.25"></line><polyline class="cls-1" points="18.21 19.46 16.98 14.88 21.56 13.65"></polyline><line class="cls-1" x1="9.51" y1="13.44" x2="2.04" y2="17.75"></line><polyline class="cls-1" points="14.49 10.56 16.98 9.13 21.96 6.25"></polyline><polyline class="cls-1" points="18.21 4.54 16.98 9.13 21.56 10.35"></polyline><line class="cls-1" x1="9.51" y1="13.44" x2="2.04" y2="17.75"></line><polyline class="cls-1" points="14.49 10.56 16.98 9.13 21.96 6.25"></polyline><polyline class="cls-1" points="5.79 19.46 7.02 14.88 2.44 13.65"></polyline><path class="cls-1" d="M14.88,12a2.89,2.89,0,1,1-.39-1.44A2.9,2.9,0,0,1,14.88,12Z"></path></g></svg>
+            {{ customFields.product_extra_info_two }}</span>{% endif %}
+            {% if customFields.product_extra_info_three %}<span>
+            <svg width="30px" height="30px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" stroke-width="2.496"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.a{fill:none;stroke:#000f58;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="a" d="M14.4751,32.2779a6.7232,6.7232,0,0,1-3.63,1.0431A6.0863,6.0863,0,0,1,4.5,27.5323a6.0864,6.0864,0,0,1,6.3455-5.7888c.1429,0,.2826.011.4231.02A5.4342,5.4342,0,0,1,16.4272,17.46a4.9818,4.9818,0,0,1,2.3851.6143,10.1911,10.1911,0,0,1,2.826-3.0833c3.6171-2.6211,8.1353-2.5572,10.0918.1427a5.17,5.17,0,0,1,.7686,4.127c.0535-.0018.1058-.0088.16-.0088a5.3448,5.3448,0,0,1,4.885,3.45A5.9056,5.9056,0,0,1,43.5,28.3343a5.9332,5.9332,0,0,1-6.1858,5.643,6.4265,6.4265,0,0,1-4.6856-1.9657,5.1837,5.1837,0,0,1-4.1261,2.1113,4.9982,4.9982,0,0,1-2.54-.6951,6.7448,6.7448,0,0,1-.8964.6219c-2.7687,1.5985-6.1238.9707-7.4938-1.4023a4.581,4.581,0,0,1-.3469-3.6819c.7562-2.4548,5.8335-7.1186,10.9567-4.04a9.0954,9.0954,0,0,0-4.9534-2.0171c-4.573-.0685-9.1929,3.36-9.1929,6.52a7.2808,7.2808,0,0,0,.4394,2.85"></path></g></svg>
+            {{ customFields.product_extra_info_three }}</span>{% endif %}
+        
+
+            {% if customFields.file_upload %}
+                {% set media = customFields.file_upload %}
+                <a href="{{ media.url }}" target="_blank">Download file</a>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endblock %}
         {% endblock %}
     <div class="product-detail-buy{% if elementId %}-{{ elementId }}{% endif %} js-magnifier-zoom-image-container">
         {% block buy_widget_rich_snippets %}

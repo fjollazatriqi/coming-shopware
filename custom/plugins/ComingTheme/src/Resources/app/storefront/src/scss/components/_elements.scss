@@ -28,3 +28,55 @@
   }
 }
 
+.our-partners{
+  padding: 40px 0;
+   @media (max-width: 768px) {
+      padding: 20px 0px;
+      .col-md-3{
+        flex-shrink: 0;
+         width: 50%;
+         max-width: 50%;
+         .cms-element-alignment{
+              display: flex;
+              justify-content: center;
+         }
+      }
+    }
+  .cms-element-text{
+    color: $sw-color-brand-primary;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 0;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+  .cms-block-image-four-column{
+    .cms-image-container{
+      max-width: 50%;
+    }
+  }
+}
+
+.contact-us{
+  background-color: $sw-color-brand-secondary;
+  padding: 40px 0;
+   @media (max-width: 768px) {
+      padding: 0 20px;
+    }
+  .cms-element-html{
+    text-align: center;
+    color: $sw-color-brand-primary;
+    a{
+    border: 2px solid $sw-color-brand-primary;
+    border-radius: 10px;
+    background-color: $sw-color-brand-primary;
+    color: $sw-color-brand-secondary;
+    height: max-content;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    }
+  }
+}

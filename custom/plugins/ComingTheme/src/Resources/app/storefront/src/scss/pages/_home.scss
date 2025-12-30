@@ -207,6 +207,11 @@
     background-color: $sw-color-brand-secondary;
     .cms-block-container-row{
         align-items: center;
+        .col-md-6{
+             @media (max-width: 768px) {
+                 margin-bottom: 0;
+             }
+        }
         .cms-element-html{
             display: flex;
             flex-direction: column;
@@ -214,6 +219,9 @@
             align-items: center;
             svg{
                 width: 10vw;
+                @media (max-width: 768px) {
+                  width: 20vw;
+             }
             }
             h1{
                 font-size: 68px;
@@ -227,6 +235,7 @@
                 color: $sw-color-brand-primary;
                 @media (max-width: 768px){
                     font-size: 20px;
+                    text-align: center;
             }
         }
     }
@@ -249,6 +258,9 @@
             align-items: center;
             .card-body{
                 display: flex;
+                  @media (max-width: 768px) {
+                 flex-direction: column;
+             }
               .product-wishlist{
                 display: none;
               }  
