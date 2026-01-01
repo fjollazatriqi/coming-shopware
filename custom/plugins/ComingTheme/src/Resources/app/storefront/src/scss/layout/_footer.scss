@@ -9,12 +9,16 @@
   .footer-service-menu-link,
   .footer-contact-hotline {
     color: #fff;
+    gap: 0.0;
   }
 
   a:hover,
   a:focus {
     color: rgba(255, 255, 255, 0.9);
     text-decoration: underline;
+  }
+  a{
+    text-decoration: none;
   }
 
   .footer-branding-row {

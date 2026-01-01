@@ -44,15 +44,13 @@
     }
     .cms-listing-row{
         .product-box{
-            .product-image-wrapper{
-                height: 245px;
-            }
+          
             .product-info{
               display: flex;
               flex-direction: column;
               justify-content: space-between;
                     .product-name{
-                       height: 31px;
+                       height: auto;
                         font-size: 20px; 
                     }
                     .product-price{

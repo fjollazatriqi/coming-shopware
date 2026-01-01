@@ -35,19 +35,16 @@
        margin-bottom: 0;
        display: flex;
        align-items: center;
+       height: auto !important;
+       line-height: 32px;
        @media (max-width: 768px) {
          font-size: 24px;
+          line-height: 28px;
        }
     }
     .manufacturer{
        color: $sw-color-brand-primary;
        font-size: 20px;
-    }
-    .product-detail-reviews{
-
-    }
-    .product-detail-ordernumber-container{
-
     }
     .product-detail-price-container{
        display: flex;
@@ -84,10 +81,33 @@
         }
     }
 }
+.product-detail-tabs{
+    .product-detail-tab-navigation-list{
+        .product-detail-tab-navigation-link{
+            border-color: $sw-color-brand-secondary;
+            color: $sw-color-brand-primary;
+            &:hover{
+                background-color: transparent;
+        }
+    }
+}
 .product-detail-tabs-content{
+    .product-detail-properties-table{
+         .properties-label, .properties-value{
+            color: $sw-color-brand-primary;
+        }
+        .properties-row:nth-child(odd) {
+     
+        .properties-label, .properties-value{
+            background-color: $sw-color-brand-secondary !important;
+            --bs-table-bg-type: $sw-color-brand-secondary !important;
+        }
+    }
+    }
     .product-detail-description-title{
         display: none;
     }
+}
 }
 
 .product-detail-cross-selling{

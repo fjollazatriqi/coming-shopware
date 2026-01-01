@@ -64,9 +64,18 @@
                 {% endfor %}
             {% endif %}
 
-            {{ contactSnippetKey|trans({
-                '%url%': contactUrl
-            })|raw }}
         </div>
     </div>
 {% endblock %}
+     {% block layout_footer_payment_shipping_logos %}
+      
+        {% endblock %}
+   {% block layout_footer_vat %}
+         
+            {% endblock %}
+
+            {% block layout_footer_copyright %}
+                <div class="footer-copyright">
+                    {{ 'footer.copyrightInfo'|trans|sw_sanitize }}
+                </div>
+            {% endblock %}
