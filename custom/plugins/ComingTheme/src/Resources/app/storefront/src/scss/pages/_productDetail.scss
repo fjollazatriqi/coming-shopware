@@ -130,6 +130,7 @@
 }
 
 .product-extra-info{
+    margin: 10px 0;
     @include flex(column, center, start);
     span{
         background-color: $sw-color-brand-secondary;
