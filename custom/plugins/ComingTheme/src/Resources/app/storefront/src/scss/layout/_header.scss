@@ -21,6 +21,9 @@
 			display: inline-block;
 			vertical-align: middle;
 		}
+		.dropdown-toggle::after {
+			color: #fff;
+		}
 	}
 	.icon{
 		color: $sw-color-buy-button;

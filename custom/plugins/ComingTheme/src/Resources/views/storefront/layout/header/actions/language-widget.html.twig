@@ -1,0 +1,65 @@
+{% sw_extends '@Storefront/storefront/layout/header/actions/language-widget.html.twig' %}
+{% block layout_header_actions_language_widget %}
+    {% if position is empty %}
+        {% set position = 'top-bar' %}
+    {% endif %}
+
+    {% if header.languages.count > 1 %}
+        <div class="top-bar-nav-item top-bar-language">
+            {% block layout_header_actions_language_widget_form %}
+                <form method="post"
+                      action="{{ path('frontend.checkout.switch-language') }}"
+                      class="language-form"
+                      data-form-add-dynamic-redirect="true">
+                    {% block layout_header_actions_language_widget_content %}
+                        {% set isoCode = context.languageInfo.localeCode|lower|split('-') %}
+                        {% set language = isoCode[0] %}
+                        {% set country = isoCode[1] %}
+
+                        <div class="languages-menu dropdown">
+                            <button class="btn dropdown-toggle top-bar-nav-btn"
+                                    type="button"
+                                    id="languagesDropdown-{{ position }}"
+                                    data-bs-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                    aria-label="{{ 'header.languageTrigger'|trans({ '%lang%': context.languageInfo.name })|striptags }}">
+                            <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="none" stroke="#ffffff" stroke-width="2" d="M12,23 C18.0751322,23 23,18.0751322 23,12 C23,5.92486775 18.0751322,1 12,1 C5.92486775,1 1,5.92486775 1,12 C1,18.0751322 5.92486775,23 12,23 Z M12,23 C15,23 16,18 16,12 C16,6 15,1 12,1 C9,1 8,6 8,12 C8,18 9,23 12,23 Z M2,16 L22,16 M2,8 L22,8"></path> </g></svg>
+                                <span  style="color:white;" class="top-bar-nav-text d-none d-md-inline">{{ context.languageInfo.name }}</span>
+                            </button>
+
+                            {% block layout_header_actions_languages_widget_form_items %}
+                                <ul class="top-bar-list dropdown-menu dropdown-menu-end"
+                                    aria-label="{{ 'header.languageList'|trans|striptags }}">
+                                    {% for language in header.languages %}
+                                        {% set isActiveLanguage = language.id is same as(context.context.languageId) %}
+
+                                        <li class="top-bar-list-item{% if isActiveLanguage %} active{% endif %}">
+                                            {% block layout_header_actions_languages_widget_form_items_flag %}
+                                                {% set isoCode = language.translationCode.code|lower|split('-') %}
+                                                {% set flagLanguage = isoCode[0] %}
+                                                {% set flagCountry = isoCode[1] %}
+
+                                                <button class="dropdown-item d-flex align-items-center gap-2{% if isActiveLanguage %} active{% endif %}" type="submit" name="languageId" id="{{ position }}-{{ language.id }}" value="{{ language.id }}">
+                                                      {{ language.name }}
+                                                </button>
+
+                                                {% if app.request.attributes.get('_route_params')['_locale'] %}
+                                                    <input type="hidden" name="languageCode_{{ language.id }}" value="{{ language.translationCode.code }}">
+                                                {% endif %}
+                                            {% endblock %}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endblock %}
+                        </div>
+                    {% endblock %}
+
+                    {% if position == 'offcanvas' %}
+                        <input name="redirectParameters[offcanvas]" type="hidden" value="menu">
+                    {% endif %}
+                </form>
+            {% endblock %}
+        </div>
+    {% endif %}
+{% endblock %}

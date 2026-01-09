@@ -101,3 +101,17 @@
 .navigation-flyout-col{
 	margin-bottom: 15px !important;
 }
+.offcanvas-header{
+.offcanvas-close{
+	margin-bottom: 0;
+}
+}
+.navigation-offcanvas{
+	.navigation-offcanvas-actions{
+		background-color: $sw-color-brand-primary;
+		padding-top: 0;
+		.top-bar-currency{
+			display: none;
+		}
+	}
+}
