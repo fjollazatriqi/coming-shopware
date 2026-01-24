@@ -1,124 +1,164 @@
+/* ===========================
+   Main Header
+=========================== */
 .header-main {
-	// ComingTheme: styles for promotional top-bar
-	background-color: $sw-color-brand-secondary;
-	.top-bar {
-		background-color: $sw-color-brand-primary; // full width background
-         display: block !important;
-		.top-bar-promo {
-			padding: 0.25rem 0;
-			font-size: 0.875rem; // slightly smaller
-			background-color: transparent;
-			color: #fff;
+    // ComingTheme: styles for promotional top-bar
+    background-color: $sw-color-brand-secondary;
 
-			a,
-			.top-bar-nav a {
-				color: #fff;
-				text-decoration: underline;
-			}
-		}
+    .top-bar {
+        background-color: $sw-color-brand-primary; // full width background
+        display: block !important;
 
-		.top-bar-promo .top-bar-promo-text {
-			display: inline-block;
-			vertical-align: middle;
-		}
-		.dropdown-toggle::after {
-			color: #fff;
-		}
-	}
-	.icon{
-		color: $sw-color-buy-button;
-	}
-	 @media (max-width: 768px) {
-       .header-logo-col{
-		margin-top: unset;
-		margin-bottom: unset;
-		.header-logo-main-img{
-			max-width: 60%;
-		}
-	   }
-      }
+        .top-bar-promo {
+            padding: 0.25rem 0;
+            font-size: 0.875rem; // slightly smaller
+            background-color: transparent;
+            color: #fff;
 
-	/* Search input modern style */
-	/* header search container: unified rounded pill style */
-	.header-search,
-	.header-search-form {
-		.form-control,
-		input[type="search"],
-		.header-search-form input[type="search"] {
-			border-radius: 4px 0 0 4px; // left side pill
-			padding: 0.5rem 1rem 0.5rem 1.25rem;
-			border: none;
-			background: #fff;
+            a,
+            .top-bar-nav a {
+                color: #fff;
+                text-decoration: underline;
+            }
 
-			&::placeholder { color: rgba(0, 0, 0, 0.45); }
+            .top-bar-promo-text {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
 
-			&:focus {
-				border-color: rgba($sw-color-brand-primary, 0.85);
-				box-shadow: 0 6px 24px rgba(37, 50, 80, 0.12);
-				outline: none;
-			}
-		}
+        .dropdown-toggle::after {
+            color: #fff;
+        }
+    }
 
-		.header-search-btn {
-			border-radius: 0 4px 4px 0!important;
-			height: auto;
-			min-width: 48px;
-			padding: 0.45rem 0.75rem;
-			margin-left: 0;
-			border: none;
-			border-left: 0; // remove double border between input and button
-			background: $sw-color-brand-primary;
-			color: #fff;
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
+    .icon {
+        color: $sw-color-buy-button;
+    }
 
-			.icon { color: #fff; }
+    /* ===========================
+       Logo & Responsive
+    ============================ */
+    @media (max-width: 768px) {
+        .header-logo-col {
+            margin-top: unset;
+            margin-bottom: unset;
 
-			&:hover { background-color: darken($sw-color-brand-primary, 6%); }
-		}
+            .header-logo-main-img {
+                max-width: 60%;
+            }
+        }
+    }
 
-		// When using the `.search-group` input-group wrapper
-		.input-group.search-group {
-			.form-control { border-right: 999px; }
-			.header-search-btn { border-left: 0; }
-		}
+    /* ===========================
+       Search Input Modern Style
+    ============================ */
+    .header-search,
+    .header-search-form {
+        .form-control,
+        input[type="search"],
+        .header-search-form input[type="search"] {
+            border-radius: 4px 0 0 4px; // left side pill
+            padding: 0.5rem 1rem 0.5rem 1.25rem;
+            border: none;
+            background: #fff;
 
-		// wrapper to combine input + button into one pill-like component
-		&.search-group {
-			display: inline-flex;
-			align-items: center;
-			background: transparent;
-			border-radius: 4px;
-			overflow: hidden;
-		}
-	}
+            &::placeholder {
+                color: rgba(0, 0, 0, 0.45);
+            }
 
-	/* Slightly taller header spacing to match modern look */
-	.header-row {
-		padding: 1rem 0;
-		display: flex; /* ensure row behaviour */
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		margin: auto;
+            &:focus {
+                border-color: rgba($sw-color-brand-primary, 0.85);
+                box-shadow: 0 6px 24px rgba(37, 50, 80, 0.12);
+                outline: none;
+            }
+        }
 
-		@media (max-width: 767.98px) {
-			/* on small screens stack elements vertically */
-			flex-direction: column;
-			justify-content: flex-start;
-			gap: 0.5rem;
-		}
-	}
+        .header-search-btn {
+            border-radius: 0 4px 4px 0 !important;
+            height: auto;
+            min-width: 48px;
+            padding: 0.45rem 0.75rem;
+            margin-left: 0;
+            border: none;
+            border-left: 0; // remove double border
+            background: $sw-color-brand-primary;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+                color: #fff;
+            }
+
+            &:hover {
+                background-color: darken($sw-color-brand-primary, 6%);
+            }
+        }
+
+        /* Using `.search-group` input-group wrapper */
+        .input-group.search-group {
+            .form-control {
+                border-right: 999px;
+            }
+
+            .header-search-btn {
+                border-left: 0;
+            }
+        }
+
+        /* Wrapper to combine input + button into one pill-like component */
+        &.search-group {
+            display: inline-flex;
+            align-items: center;
+            background: transparent;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+    }
+
+    /* ===========================
+       Header Row Spacing
+    ============================ */
+    .header-row {
+        padding: 1rem 0;
+        display: flex; /* ensure row behaviour */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+
+        @media (max-width: 767.98px) {
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 0.5rem;
+        }
+    }
 }
 
-.header-minimal{
-	background: $sw-color-brand-secondary;
-	 @media (min-width: 768px) {
-		padding: 0 60px;
-	 }
-	 .header-minimal-back-to-shop-button{
-		background-color: $sw-color-buy-button;
-		color: #fff;
-	 }
+/* ===========================
+   Minimal Header
+=========================== */
+.header-minimal {
+    background: $sw-color-brand-secondary;
+
+    @media (max-width: 768px) {
+        .header-minimal-row {
+            justify-content: center;
+            align-items: center;
+            width: 100% !important;
+
+            .header-minimal-logo {
+                width: 78%;
+            }
+        }
+
+        padding: 0 60px;
+    }
+
+    .header-minimal-back-to-shop-button {
+        background-color: $sw-color-buy-button;
+        color: #fff;
+    }
 }

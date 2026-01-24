@@ -66,24 +66,27 @@
     }
 
     .line-item-quantity-label {
-      visibility: hidden;
-      padding: 0;
-      margin: 0;
-      max-height: 15px;
+      display: none;
+    }
+    .line-item-quantity-select-wrapper{
+      margin-top: 20px;
+       @media (max-width: 768px) {
+            width: 100%;
+       }
     }
 
     .input-group {
-      border: 1px solid $sw-cart-border;
+      border: none;
+      width: 60%;
     }
 
     .form-control {
-      font-size: 15px;
-      border: 1px solid $sw-cart-border;
+      font-size: 13px;
+      border: none;
     }
 
     .btn {
-      font-size: 15px;
-      border: 1px solid $sw-cart-border;
+      font-size: 13px;
       line-height: 1rem;
     }
 
@@ -98,6 +101,10 @@
   top: 6px;
   right: 6px;
   z-index: 10;
+   @media (max-width: 768px) {
+           top: 4px;
+          right: -22px;
+       }
 
   button {
     width: 28px;
@@ -147,4 +154,22 @@
 
 .offcanvas-body {
   padding-top: 0px;
+}
+
+.line-item-label {
+  font-size: 12px;
+}
+.line-item-details-characteristics{
+  font-size: 11px;
+}
+
+.is-act-confirmpage{
+  .line-item-quantity-select-wrapper{
+    margin-top: 20px;
+    width: 50% !important;
+       @media (max-width: 768px) {
+           width: 100% !important;
+       }
+
+  }
 }
