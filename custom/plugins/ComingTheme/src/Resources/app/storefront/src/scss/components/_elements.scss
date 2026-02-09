@@ -1,3 +1,40 @@
+.hero-banner{
+  .image-slider-container{
+    .image-slider-item-container{
+      .image-slider-item{
+        img{
+          border-radius: 10px;
+        }
+      }
+    }
+  
+  }
+   .image-slider-controls-container{
+      .base-slider-controls-prev {
+        left: 20px;
+      } 
+      .base-slider-controls-next {
+        right: 20px;
+      }
+      button{
+        background-color: $sw-color-brand-secondary;
+        height: 60px;
+        border-radius: 100%;
+        width: 60px;
+        border: none;
+        .icon{
+          color: $sw-color-brand-primary;
+          svg{
+            top:0;
+          }
+        }
+      }
+    }
+}
+
+
+
+
 .cms-element-product-slider{
   .cms-element-title-paragraph{
     font-size: 30px;
@@ -60,14 +97,15 @@
 }
 
 .contact-us{
-  background-color: $sw-color-brand-secondary;
-  padding: 40px 0;
    @media (max-width: 768px) {
       padding: 0 20px;
     }
   .cms-element-html{
     text-align: center;
     color: $sw-color-brand-primary;
+    background-color: $sw-color-brand-secondary;
+    padding: 40px 0;
+    border-radius: 8px;
     a{
     border: 2px solid $sw-color-brand-primary;
     border-radius: 10px;

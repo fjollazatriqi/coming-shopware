@@ -2,9 +2,12 @@
    Main Product Characteristics
 =========================== */
 .prod-main-characteristics {
-    background-color: $sw-color-brand-secondary;
+   
 
     .cms-block-container {
+         background-color: $sw-color-brand-secondary;
+         border-radius: 8px;
+        margin: 20px 0;
         .col-md-4 {
             .cms-element-image {
                 margin-top: 20px;
@@ -42,10 +45,12 @@
    Special Offer Banner
 =========================== */
 .special-offer-banner {
-    background-color: $sw-color-brand-primary;
-
     .cms-section-default {
+        
         .cms-block {
+             background-color: $sw-color-brand-primary;
+             padding: 20px;
+             border-radius: 8px;
             .cms-block-container-row {
                 .cms-element-text {
                     .main-content {
@@ -227,106 +232,106 @@
 
 /* ===========================
    Home Banner
-=========================== */
-.home-banner {
-    background-color: $sw-color-brand-secondary;
+// =========================== */
+// .home-banner {
+//     background-color: $sw-color-brand-secondary;
 
-    .cms-block-container-row {
-        align-items: center;
+//     .cms-block-container-row {
+//         align-items: center;
 
-        .col-md-6 {
-            @media (max-width: 768px) {
-                margin-bottom: 0;
-            }
-        }
+//         .col-md-6 {
+//             @media (max-width: 768px) {
+//                 margin-bottom: 0;
+//             }
+//         }
 
-        .cms-element-html {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+//         .cms-element-html {
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
 
-            svg {
-                width: 10vw;
+//             svg {
+//                 width: 10vw;
 
-                @media (max-width: 768px) {
-                    width: 20vw;
-                }
-            }
+//                 @media (max-width: 768px) {
+//                     width: 20vw;
+//                 }
+//             }
 
-            h1 {
-                font-size: 40px;
-                color: $sw-color-brand-primary;
+//             h1 {
+//                 font-size: 40px;
+//                 color: $sw-color-brand-primary;
 
-                @media(max-width: 768px) {
-                    font-size: 30px;
-                }
-            }
+//                 @media(max-width: 768px) {
+//                     font-size: 30px;
+//                 }
+//             }
 
-            p {
-                font-size: 22px;
-                color: $sw-color-brand-primary;
+//             p {
+//                 font-size: 22px;
+//                 color: $sw-color-brand-primary;
 
-                @media (max-width: 768px) {
-                    font-size: 18px;
-                    text-align: center;
-                }
-            }
-        }
+//                 @media (max-width: 768px) {
+//                     font-size: 18px;
+//                     text-align: center;
+//                 }
+//             }
+//         }
 
-        .cms-element-product-box {
-            animation: dropDown 1.2s ease-out forwards;
+//         .cms-element-product-box {
+//             animation: dropDown 1.2s ease-out forwards;
 
-            @keyframes dropDown {
-                0% {
-                    transform: translateY(-20px);
-                    opacity: 0;
-                }
-                100% {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-            }
+//             @keyframes dropDown {
+//                 0% {
+//                     transform: translateY(-20px);
+//                     opacity: 0;
+//                 }
+//                 100% {
+//                     transform: translateY(0);
+//                     opacity: 1;
+//                 }
+//             }
 
-            .product-box {
-                border-radius: 30px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+//             .product-box {
+//                 border-radius: 30px;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
 
-                .card-body {
-                    display: flex;
-                    flex-direction: row;
+//                 .card-body {
+//                     display: flex;
+//                     flex-direction: row;
 
-                    @media (max-width: 768px) {
-                        flex-direction: column;
-                    }
+//                     @media (max-width: 768px) {
+//                         flex-direction: column;
+//                     }
 
-                    .product-wishlist {
-                        display: none;
-                    }
+//                     .product-wishlist {
+//                         display: none;
+//                     }
 
-                    .product-image-wrapper {
-                        height: 272px;
-                    }
+//                     .product-image-wrapper {
+//                         height: 272px;
+//                     }
 
-                    .product-info {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
+//                     .product-info {
+//                         display: flex;
+//                         flex-direction: column;
+//                         justify-content: center;
 
-                        .product-price-info {
-                            .product-price-tax-link {
-                                display: none;
-                            }
+//                         .product-price-info {
+//                             .product-price-tax-link {
+//                                 display: none;
+//                             }
 
-                            .product-name {
-                                margin-bottom: 0;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+//                             .product-name {
+//                                 margin-bottom: 0;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
